@@ -12,6 +12,9 @@ public class GameViewActivity extends AppCompatActivity implements MenuCallback 
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         int difficulty = getIntent().getIntExtra("Difficulty",1);
+        //MediaPlayer player;
+        //player = MediaPlayer.create(this, R.);
+        //player.setLooping(true); // зацикливаем
         setContentView(new GameView(this, difficulty, this));
     }
 
@@ -21,6 +24,7 @@ public class GameViewActivity extends AppCompatActivity implements MenuCallback 
     }
 
     public void endGame() {
+        //player.stop();
         finish();
     }
 }
